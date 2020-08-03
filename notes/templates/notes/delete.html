@@ -1,0 +1,15 @@
+{% extends "notes/base.html" %}
+{% block content %}
+
+<p> Are you sure you want to delete this post? </p>
+
+<form method="POST">
+	{ csrf_token }
+
+	<a href="{% url 'notes-home'%}"></a>
+
+	<input type="submit" name="confirm">
+
+</form>
+
+{% endblock content %}

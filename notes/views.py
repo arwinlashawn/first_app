@@ -46,12 +46,16 @@ class PostListView(ListView):
 	# notice that latest message is at the bottom, gotta change it
 	ordering = ['-date_posted']
 
-def create(request): # finally!
 
-	if request.method == 'POST':
+# dont need to authenticate user because only logged in users can post?
+def create(request): # finally! # add delete feature for owners of the posts
+
+	if request.method == 'POST' and request.user.is_authenticated:
+		# print('printing POST:', request.POST)
 		form = SimpleForm(request.POST)
 
 		if form.is_valid():
+			# print('printing POST:', request.POST)
 			a = request.user
 			n = form.cleaned_data["message"]
 			t = Post(content=n, author=a)
@@ -70,9 +74,17 @@ def create(request): # finally!
 
 	return render(request, "notes/home.html", context)
 
+@login_required	
+def delete(request, post_id=None):
+	if request.user.is_authenticated:
+		to_delete = Post.objects.get(id=post_id)
+		to_delete.delete()
+
+	return HttpResponseRedirect("/")
 
 
-
+	# context = {'posts': Post.objects.all().order_by('-date_posted')}
+	# return render(request, "notes/home.html", context)
 
 
 def about(request):
