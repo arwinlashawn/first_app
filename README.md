@@ -1,5 +1,5 @@
 # first_app
-A Twitter-like app using Python, Django and Bootstrap. Click [this](https://arwinfirstapp.herokuapp.com/) to check out the app.
+A Twitter-like app using Python, Django and Bootstrap. Click <a href="https://arwinfirstapp.herokuapp.com/" target="_blank">this</a> to check out the app!
 
 ## What you can do
 * Post notes
