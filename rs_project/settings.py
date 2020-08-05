@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = ['arwinfirstapp.herokuapp.com']
+ALLOWED_HOSTS = ['arwinfirstapp.herokuapp.com', 'pastelnotes.herokuapp.com']
 
 
 # Application definition
@@ -125,8 +125,11 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'notes-home'
+
+
 
 django_heroku.settings(locals())

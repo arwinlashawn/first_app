@@ -17,3 +17,5 @@ def register(request):
 	return render(request, 'users/register.html', {'form': form})
 
 
+# how to not see posts aas non user
+# fix the issue of not being able to deplot to git

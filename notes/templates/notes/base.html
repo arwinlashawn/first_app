@@ -19,7 +19,7 @@
 		<title> Notes </title>
 	{% endif %}
 </head>
-<body>
+<body style="background-color: #D3EEFF"> 
 	<header class="site-header">
 	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 	    <div class="container">
@@ -62,8 +62,8 @@
 	    	
 	    {% block form %}
 	    </div>
-	    <div class="col-md-6">
-	      <div class="content-section">
+	    <div class="col-md-6" >
+	      <div class="content-section" style="background-color: #E0FEFE">
 	      	{% if user.is_authenticated %}  
 	      		<h4 class="text-muted"> Post a note now! </h4>
 	        	<form action="" method="post"> {% csrf_token %}
