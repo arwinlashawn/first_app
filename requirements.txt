@@ -34,7 +34,7 @@ superprompt==1.2.0
 svgwrite==1.4
 Top==1.0.0
 Tree==0.2.4
-urllib3==1.25.8
+urllib3==1.26.5
 virtualenv==20.0.18
 wget==3.2
 whitenoise==5.1.0
